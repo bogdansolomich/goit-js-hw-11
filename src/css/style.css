@@ -51,6 +51,7 @@ button {
   margin: 0 auto;
   text-align: center;
   border: 2px solid #ff0000;
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -59,6 +60,7 @@ button:hover {
   border: 2px solid #ff0000;
   font-weight:700;
   cursor: pointer;
+  animation: colorchange 1500ms infinite;
 }
 
 .gallery {
@@ -158,4 +160,8 @@ button:hover {
     background-color: #BCB9AD;
       color: #2E2E30;
       border: 1px solid #BCB9AD;
+}
+
+.gallery-link {
+  color: #000;
 }
