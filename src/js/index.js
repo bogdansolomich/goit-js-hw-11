@@ -79,9 +79,9 @@ async function loadMoreBotton() {
     const cardsCreate = cardListMarkup(data.hits);
     elements.cardList.insertAdjacentHTML('beforeend', cardsCreate);
 
-    if (data.hits.length < 40) {
+ if (data.totalHits <= quantityImg) {
       elements.btnLoadMore.style.display = 'none';
-      Notify.info("Sorry, but you've reached the end of search results.");
+      Notify.info("You've reached the end of search results.");
     }
   } catch (error) {
     Notify.failure(error.message);

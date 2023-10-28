@@ -1,15 +1,22 @@
 body {
   font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #797876, #161616);
+  background: linear-gradient(to right, #E8E3DC, #6F6965, #0F0D0C);
   animation: gradient 5s ease infinite;
 }
+
+h1 {
+text-align: center;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -17,6 +24,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -31,24 +39,26 @@ button {
   transition: background-color 0.3s;
 }
 
+.load-more-hidden {
+  display: none;
+  margin: 20px 0;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #ff0000;
+}
+
 button:hover {
-  background-color: #656462;
-}
-
-.info-likes {
-  color: #fc4f4f;
-}
-
-.info-views {
-  color: #60a9f6;
-}
-
-.info-comments {
-  color: #5c5c5c;
-}
-
-.info-downloads {
-  color: #72c472;
+  background-color: #fff;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  font-weight:700;
+  cursor: pointer;
 }
 
 .gallery {
@@ -84,10 +94,6 @@ button:hover {
   margin: 5px 0;
 }
 
-.item-text {
-  margin-left: 5px;
-}
-
 .search-form {
   display: flex;
   justify-content: center;
@@ -103,12 +109,14 @@ button:hover {
 }
 
 .search-form button {
-    color: #fff;
-    cursor: pointer;
-    background-color: #2E2E30;
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    transition: background-color 1.5s;
+  padding: 10px 20px;
+  background-color: #2E2E30;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 1500ms;
+  cursor: pointer;
 }
 
 .container {
@@ -130,9 +138,9 @@ button:hover {
 
 .btn-search {
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #2E2E30;
   color: white;
-  border: 1px solid #4caf50;
+  border: 1px solid #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -145,7 +153,9 @@ button:hover {
 }
 
 .search-form button:hover {
-background-color: #656462;
-border: 1px solid #656462;
+  animation: colorchange 1500ms infinite;
+  font-weight: 400;
+    background-color: #BCB9AD;
+      color: #2E2E30;
+      border: 1px solid #BCB9AD;
 }
-

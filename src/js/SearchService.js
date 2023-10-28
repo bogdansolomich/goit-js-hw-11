@@ -3,7 +3,7 @@ export { SearchService, Notify };
 import axios from 'axios';
 
 const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '40248939-f712c7f983066a304da5b3485';
+const API_KEY = '40243094-9cac1343afd7c4b92bc3dbcfd';
 
 async function SearchService(currentPage, searchQuery) {
   const parameters = new URLSearchParams({
@@ -28,4 +28,27 @@ async function SearchService(currentPage, searchQuery) {
     );
     throw error;
   }
+}
+
+// Підключіть ваші функції та об'єкти
+
+window.addEventListener('scroll', () => {
+  if (isScrolledToBottom()) {
+    // Завантажте ще дані, якщо сторінка доклався до нижньої частини
+    loadMoreBotton();
+  }
+});
+
+function isScrolledToBottom() {
+  const scrollHeight = Math.max(
+    document.documentElement.scrollHeight,
+    document.body.scrollHeight
+  );
+  const scrollTop = Math.max(
+    document.documentElement.scrollTop,
+    document.body.scrollTop
+  );
+  const clientHeight = document.documentElement.clientHeight;
+
+  return scrollHeight - scrollTop - clientHeight < 40;
 }
