@@ -24,7 +24,7 @@ async function handlSubmit(evt) {
   elements.btnLoadMore.style.display = 'none';
   currentPage = 1;
 
-  const searchQuery = evt.target.elements.searchQuery.vadlue.trim();
+  const searchQuery = evt.target.elements.searchQuery.vadlue;
   localStorage.setItem('input-value', searchQuery);
 
   if (!searchQuery) {
