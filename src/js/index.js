@@ -27,6 +27,7 @@ async function handlSubmit(evt) {
   const searchQuery = evt.target.elements.searchQuery.value.trim();
   localStorage.setItem('input-value', searchQuery);
 
+  
   if (!searchQuery) {
     return Notify.failure('Enter your search details.');
   }
